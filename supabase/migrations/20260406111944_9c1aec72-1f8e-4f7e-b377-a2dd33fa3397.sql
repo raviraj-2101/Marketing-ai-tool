@@ -1,0 +1,2 @@
+ALTER TABLE public.statics_logs ADD COLUMN IF NOT EXISTS products_to_show text NULL DEFAULT '5 Products';
+ALTER TABLE public.form_templates ADD COLUMN IF NOT EXISTS products_to_show text NULL DEFAULT '5 Products';

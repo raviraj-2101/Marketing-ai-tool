@@ -1,0 +1,1 @@
+ALTER TABLE public.inspos ADD COLUMN funnel_type text NOT NULL DEFAULT 'onbrand';

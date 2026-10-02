@@ -1,0 +1,1 @@
+ALTER TABLE public.statics_logs ADD COLUMN prompt_for_images text DEFAULT NULL;

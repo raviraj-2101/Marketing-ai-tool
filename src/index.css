@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 20% 98%;
+    --foreground: 222 47% 11%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+
+    --primary: 217 91% 60%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 222 47% 11%;
+
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 16% 47%;
+
+    --accent: 210 40% 96%;
+    --accent-foreground: 222 47% 11%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 217 91% 60%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 222 47% 11%;
+    --sidebar-foreground: 210 40% 96%;
+    --sidebar-primary: 217 91% 60%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 217 33% 17%;
+    --sidebar-accent-foreground: 210 40% 96%;
+    --sidebar-border: 217 33% 17%;
+    --sidebar-ring: 217 91% 60%;
+
+    --success: 142 76% 36%;
+    --success-foreground: 0 0% 100%;
+    
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
+  }
+
+  .dark {
+    --background: 222 47% 11%;
+    --foreground: 210 40% 98%;
+
+    --card: 217 33% 17%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 217 33% 17%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 217 91% 60%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 217 33% 17%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217 33% 17%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 217 33% 17%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217 33% 17%;
+    --input: 217 33% 17%;
+    --ring: 212 27% 84%;
+    
+    --sidebar-background: 222 47% 8%;
+    --sidebar-foreground: 210 40% 96%;
+    --sidebar-primary: 217 91% 60%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 217 33% 14%;
+    --sidebar-accent-foreground: 210 40% 96%;
+    --sidebar-border: 217 33% 14%;
+    --sidebar-ring: 217 91% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+}
+
+@layer components {
+  .page-container {
+    @apply p-6 lg:p-8;
+  }
+  
+  .page-header {
+    @apply mb-8;
+  }
+  
+  .page-title {
+    @apply text-2xl font-semibold text-foreground;
+  }
+  
+  .page-description {
+    @apply text-muted-foreground mt-1;
+  }
+  
+  .module-card {
+    @apply bg-card rounded-lg border border-border p-6 shadow-sm hover:shadow-md transition-shadow;
+  }
+  
+  .stat-card {
+    @apply bg-card rounded-lg border border-border p-5;
+  }
+  
+  .stat-value {
+    @apply text-3xl font-bold text-foreground;
+  }
+  
+  .stat-label {
+    @apply text-sm text-muted-foreground mt-1;
+  }
+
+  .content-card {
+    @apply bg-card rounded-xl border border-border p-6 shadow-sm;
+  }
+
+  .funnel-badge-comparison {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold bg-blue-50 text-blue-700 border border-blue-100;
+  }
+
+  .funnel-badge-onbrand {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold bg-emerald-50 text-emerald-700 border border-emerald-100;
+  }
+
+  .funnel-badge-tsl {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold bg-purple-50 text-purple-700 border border-purple-100;
+  }
+
+  /* Ads Launcher button system */
+  .btn {
+    @apply inline-flex items-center justify-center rounded-lg px-3.5 py-2 text-sm font-medium transition-all duration-150 select-none;
+    @apply min-h-[40px] md:min-h-[40px];
+    @apply active:translate-y-px;
+    @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-brand-500;
+  }
+
+  .btn-icon {
+    @apply inline-flex items-center justify-center rounded-md text-slate-500 hover:text-slate-900 hover:bg-slate-100 transition-colors;
+    @apply min-w-[36px] min-h-[36px];
+    @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-1 focus-visible:ring-brand-500;
+  }
+
+  .btn-primary {
+    @apply btn bg-brand-500 text-white shadow-sm hover:bg-brand-600 hover:shadow disabled:opacity-50 disabled:hover:bg-brand-500 disabled:cursor-not-allowed;
+  }
+
+  .btn-secondary {
+    @apply btn bg-white text-slate-700 border border-slate-300 shadow-sm hover:bg-slate-50 hover:border-slate-400 disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  .btn-danger {
+    @apply btn bg-red-600 text-white shadow-sm hover:bg-red-700 disabled:opacity-50;
+    @apply focus-visible:ring-red-500;
+  }
+
+  /* Ads Launcher form elements */
+  .al-input {
+    @apply block w-full rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm shadow-sm transition-colors;
+    @apply hover:border-slate-400 focus:border-brand-500 focus:ring-2 focus:ring-brand-500/20 focus:outline-none;
+    @apply disabled:bg-slate-50 disabled:text-slate-500 disabled:cursor-not-allowed;
+  }
+
+  .al-input[readonly] {
+    @apply bg-slate-50 text-slate-600 cursor-default;
+  }
+
+  .al-label {
+    @apply block text-[11px] font-semibold uppercase tracking-wider text-slate-600 mb-1.5;
+  }
+
+  /* Ads Launcher card */
+  .al-card {
+    @apply bg-white rounded-xl shadow-card border border-slate-200/80 p-5;
+  }
+
+  .al-card-interactive {
+    @apply al-card transition-shadow hover:shadow-card-lg;
+  }
+
+  /* Ads Launcher pill/chip */
+  .chip {
+    @apply inline-flex items-center justify-center rounded-full border text-xs font-medium transition-colors;
+    @apply px-3 py-1.5 min-h-[32px];
+    @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-1 focus-visible:ring-brand-500;
+  }
+}
+
+/* Touch devices: bump buttons + chips + icon-buttons to 44px min */
+@media (pointer: coarse) {
+  .btn { min-height: 44px; }
+  .btn-icon { min-width: 44px; min-height: 44px; }
+  .chip { min-height: 40px; padding-left: 0.875rem; padding-right: 0.875rem; }
+  .al-input { min-height: 44px; }
+  select.al-input { min-height: 44px; }
+}
+
+/* Toast animation classes */
+.animate-in {
+  animation-duration: 180ms;
+  animation-timing-function: ease-out;
+  animation-fill-mode: both;
+}
+.fade-in {
+  animation-name: fade-in;
+}
+.slide-in-from-bottom-2 {
+  animation-name: slide-up;
+}
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes slide-up {
+  from { transform: translateY(8px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* Respect prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* CS KPIs tab — sticky first column (angle names) */
+.cs-kpi-sticky { position: sticky; left: 0; z-index: 2; }
+.cs-kpi-sticky::after { content:""; position:absolute; top:0; right:-1px; bottom:0; width:6px;
+  background:linear-gradient(to right, rgba(15,23,42,.06), transparent); pointer-events:none; }
+/* Corner header cell: frozen on both axes (top-left) */
+.cs-kpi-corner { position: sticky; left: 0; top: 0; }
+/* Full-row hover highlight across the whole wide matrix (incl. sticky first cell) */
+.cs-kpi-row:hover > td { background-color: #eef2ff !important; }

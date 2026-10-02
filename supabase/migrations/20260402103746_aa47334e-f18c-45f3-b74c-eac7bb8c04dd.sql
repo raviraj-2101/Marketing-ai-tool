@@ -1,0 +1,1 @@
+ALTER TABLE public.statics_logs ADD COLUMN description text DEFAULT NULL;

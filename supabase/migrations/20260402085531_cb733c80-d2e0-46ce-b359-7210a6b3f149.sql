@@ -1,0 +1,1 @@
+ALTER TABLE public.statics_logs ADD COLUMN file_naming_convention text;

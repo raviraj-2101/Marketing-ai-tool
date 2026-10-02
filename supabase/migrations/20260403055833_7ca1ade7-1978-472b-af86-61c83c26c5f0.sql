@@ -1,0 +1,1 @@
+ALTER TABLE public.statics_logs ADD COLUMN image_generation_drive_link text;

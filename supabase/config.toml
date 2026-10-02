@@ -1,0 +1,90 @@
+project_id = "enratirbtjwenexmlceh"
+
+[functions.execute-generation]
+verify_jwt = false
+
+[functions.update-generation-status]
+verify_jwt = false
+
+[functions.generation-status-api]
+verify_jwt = false
+
+[functions.execute-avatar-generation]
+verify_jwt = false
+
+[functions.execute-scene-generation]
+verify_jwt = false
+
+[functions.ugc-generation-callback]
+verify_jwt = false
+
+[functions.generate-prompt]
+verify_jwt = false
+
+[functions.create-tsl-script]
+verify_jwt = false
+
+[functions.drive-list-images]
+verify_jwt = false
+
+[functions.drive-delete-images]
+verify_jwt = false
+
+[functions.drive-download-images]
+verify_jwt = false
+
+[functions.sync-statics-record]
+verify_jwt = false
+
+[functions.sync-clickup-fields]
+verify_jwt = false
+
+[functions.add-cs]
+verify_jwt = false
+
+[functions.update-ad]
+verify_jwt = false
+
+[functions.iterate-tsl-images]
+verify_jwt = false
+
+[functions.webhook]
+verify_jwt = false
+
+[functions.get-tsl-scripts]
+verify_jwt = false
+
+[functions.drive-proxy-image]
+verify_jwt = false
+
+[functions.get-ads-db-sheet-id]
+verify_jwt = false
+
+[functions.generate-brief]
+verify_jwt = false
+
+[functions.generate-inspo-brief]
+verify_jwt = false
+
+[functions.submit-pipeline]
+verify_jwt = false
+
+[functions.update-tsl-script]
+verify_jwt = false
+[functions.generate-images]
+verify_jwt = false
+
+[functions.generate-tsl-variations]
+verify_jwt = false
+
+[functions.manage-users]
+verify_jwt = false
+
+[functions.auth-login]
+verify_jwt = false
+
+[functions.upload-to-heygen]
+verify_jwt = false
+
+[functions.pixar-image-callback]
+verify_jwt = false

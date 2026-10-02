@@ -1,0 +1,2 @@
+ALTER TABLE custom_fields
+  ADD COLUMN IF NOT EXISTS is_option_product_level BOOLEAN NOT NULL DEFAULT FALSE;
